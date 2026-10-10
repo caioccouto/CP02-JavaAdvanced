@@ -8,7 +8,7 @@ public class CursoMapper {
     private CursoMapper(){}
 
     public static CursoResponse toResponse(Curso curso){
-        return new CursoResponse(curso.getId(), curso.getTitulo(), getDescricao());
+        return new CursoResponse(curso.getId(), curso.getTitulo(), curso.getDescricao());
     }
 
 }
