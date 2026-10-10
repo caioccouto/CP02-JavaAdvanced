@@ -1,5 +1,6 @@
 package br.com.rm563452.cp2.sistema_cursos.dto;
 
+import br.com.rm563452.cp2.sistema_cursos.validation.MultipleOf;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -19,5 +20,6 @@ public record ModuloRequest(
 
         @NotNull(message = "carga horária é obrigatória")
         @Positive(message = "carga horária deve ser positiva")
+        @MultipleOf(value = 5, message = "carga horária deve ser multipla de 5")
         Integer cargaHoraria) {
 }
